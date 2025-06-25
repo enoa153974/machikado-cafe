@@ -3,7 +3,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import type { siteDataType } from '../types/siteData';
-import '../styles/style.scss'; 
+import '../styles/style.scss';
 
 const siteData: siteDataType = {
     siteName: import.meta.env.PUBLIC_SITENAME,
@@ -32,7 +32,7 @@ const { currentPath, ...otherProps } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!--ページタイトル-->
-        <title>サンプルページ</title>
+        <title>machikado cafe | 香里園にあるクレープとコーヒーのお店です</title>
 
         <!-- ページ個別メタデータ -->
         <meta name="description" content={siteData.description} />
@@ -46,10 +46,9 @@ const { currentPath, ...otherProps } = Astro.props;
         <!-- 外部フォント-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         <!-- 日本語フォント -->
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
         <!-- 英語フォント -->
-        <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
 
         <!-- ライブラリのcss/publicから読み込み -->
         <link rel="stylesheet" href="/assets/style/slick.css" />
@@ -57,19 +56,19 @@ const { currentPath, ...otherProps } = Astro.props;
     </head>
 
     <body class="has-fixed-header">
-        <Header currentPath={currentPath}/>
+        <Header currentPath={currentPath} />
 
         <main>
             <slot />
         </main>
 
-        <Footer currentPath={currentPath}/>
+        <Footer currentPath={currentPath} />
 
         <!-- jQuery & Slick（CDNまたはpublicからの外部ファイル） -->
         <script is:inline src="/assets/scripts/libs/jquery-3.7.1.min.js"></script>
         <script is:inline src="/assets/scripts/libs/slick.min.js"></script>
 
-        <!-- 各jsを初期化するmain.jsの読み込み -->
-        <script type="module" src="/assets/scripts/ui/main.js"></script>
+        <script is:inline src="/assets/scripts/ui/main.js"></script>
+
     </body>
 </html>

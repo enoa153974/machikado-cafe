@@ -24,16 +24,21 @@ const { currentPath } = Astro.props;
             <nav class="header__nav pc-nav">
                 <ul class="header__nav-inner flex items-center font-bold">
                     <li class="header__text">
-                        <a href={siteData.sample.path} class={currentPath === '/sample' ? 'is-active' : ''}>sample</a>
+                        <a href={siteData.info.path} class={currentPath === '/info' ? 'is-active' : ''}>店舗情報</a>
                     </li>
                     <li class="header__text">
-                        <a href={siteData.faq.path} class={currentPath === '/faq' ? 'is-active' : ''}>faq</a>
+                        <a href={siteData.intro.path} class={currentPath === '/intro' ? 'is-active' : ''}>お店の紹介</a>
                     </li>
-                    <li>
+                                        <li class="header__text">
+                        <a href={siteData.menu.path} class={currentPath === '/menu' ? 'is-active' : ''}>メニュー</a>
+                    </li>
+                                        <li class="header__text">
+                        <a href={siteData.news.path} class={currentPath === '/news' ? 'is-active' : ''}>お知らせ</a>
+<!--                     <li>
                         <Button href="リンク" className="header__btn" variant="primary">
                             <span>ボタンテキスト</span>
                         </Button>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
 
@@ -41,8 +46,10 @@ const { currentPath } = Astro.props;
             <nav id="global-nav" class="sp-nav font-bold">
                 <ul>
                     <li><a href="/">トップ</a></li>
-                    <li><a href={siteData.sample.path}>sample</a></li>
-                    <li><a href={siteData.faq.path}>faq</a></li>
+                    <li><a href={siteData.info.path}>店舗情報</a></li>
+                    <li><a href={siteData.intro.path}>お店の紹介</a></li>
+                    <li><a href={siteData.menu.path}>メニュー</a></li>
+                    <li><a href={siteData.intro.path}>お知らせ</a></li>
                 </ul>
             </nav>
         </div>

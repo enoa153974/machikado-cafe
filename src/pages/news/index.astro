@@ -4,20 +4,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import FaqSectionCategory from '../../components/FaqSectionCategory.astro';
 
-const pageId = 'faq',
+const pageId = 'news',
     pageMeta = siteData[pageId],
     ldJSON = [
         {
             '@type': 'ListItem',
-            position: 3,
+            position: 5,
             item: {
                 '@id': `${import.meta.env.PUBLIC_ENVURL}${pageMeta.path}`,
-                name: 'faq'
+                name: 'news'
             }
         }
     ];
 
-const currentPath = '/faq';
+const currentPath = '/news';
 ---
 
 <!--BaseLayout.hemlの<slot />内に代入される -->
@@ -31,7 +31,7 @@ const currentPath = '/faq';
     ldJSON={ldJSON}
     currentPath={currentPath}
 >
-    <Hero />
+<!--     <Hero />
 
     <FaqSectionCategory
         title=""
@@ -49,5 +49,5 @@ const currentPath = '/faq';
                 answer: 'テキストanswer'
             },
         ]}
-    />
+    /> -->
 </BaseLayout>

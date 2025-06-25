@@ -1,27 +1,41 @@
 /* header、footerの各ナビの
-・<a href={siteData.example.path} class={currentPath === '/example' ? 'is-active' : ''}>価格・スペック</a>  と
+・<a href={siteData.example.path} class={currentPath === '/example' ? 'is-active' : ''}>sample~</a>  と
 ・page.astroの const currentPath = '/';  の該当ID名を書き換えして使用することで自動的に各ページを判別 + metaデータの自動入力 */
 
 export default {
     home: {
-        title: 'サイトタイトル',
-        description: 'サイトタイトルの説明文です',
+        title: 'machikado cafe | 香里園にあるクレープとコーヒーのお店です',
+        description: 'machikado cafeは大阪府寝屋川市香里園アルプラザのフードコート1階にあるこだわりのクレープとコーヒーのお店です。',
         ogpImage: '/assets/images/ogp_default.png',
         type: 'website',
         path: '/'
     },
-    sample: {
-        title: '下層サンプルページ１',
-        description: '下層サンプルページの説明文です',
+    info: {
+        title: 'machikado cafe | 香里園にあるクレープとコーヒーのお店です',
+        description: 'machikado cafeは大阪府寝屋川市香里園アルプラザのフードコート1階にあるこだわりのクレープとコーヒーのお店です。',
         ogpImage: '/assets/images/ogp_default.png',
         type: 'article',
-        path: '/sample'
+        path: '/info'
     },
-    faq: {
-        title: '下層サンプルページ２',
-        description: '投稿一覧ページの説明文です',
+    intro: {
+        title: 'machikado cafe | 香里園にあるクレープとコーヒーのお店です',
+        description: 'machikado cafeは大阪府寝屋川市香里園アルプラザのフードコート1階にあるこだわりのクレープとコーヒーのお店です。',
         ogpImage: '/assets/images/ogp_default.png',
         type: 'article',
-        path: '/faq'
+        path: '/intro'
+    },
+    menu: {
+        title: 'machikado cafe | 香里園にあるクレープとコーヒーのお店です',
+        description: 'machikado cafeは大阪府寝屋川市香里園アルプラザのフードコート1階にあるこだわりのクレープとコーヒーのお店です。',
+        ogpImage: '/assets/images/ogp_default.png',
+        type: 'article',
+        path: '/menu'
+    },
+    news: {
+        title: 'machikado cafe | 香里園にあるクレープとコーヒーのお店です',
+        description: 'machikado cafeは大阪府寝屋川市香里園アルプラザのフードコート1階にあるこだわりのクレープとコーヒーのお店です。',
+        ogpImage: '/assets/images/ogp_default.png',
+        type: 'article',
+        path: '/news'
     }
 };

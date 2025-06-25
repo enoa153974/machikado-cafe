@@ -1,34 +1,9 @@
-# ashro
+# machikado-cafe
 
-（開発途中／Sass + Bootstrap風 Grid対応）
-
-ashroは、Astroベースのモダンな静的コーディング用テンプレートです。  
-LPやコーポレートサイトなどのWebページ制作に最適化された構成で、Bootstrap風 Grid + 自作ユーティリティクラス + Sass設計により、柔軟かつ保守性の高いマークアップが可能です。
-
-## Features
-
-ashroで主にできることは以下になります。
-
-- Astroコンポーネントを使ったHTMLマークアップ
-- ページメタデータ外部ファイル（JSON）読み込み
-- JSON-LD構造化データのテンプレート対応
-- Bootstrap Gridシステムの導入（Sassで読み込み
-- 自作ユーティリティクラスで自由な装飾を構成
-- Sass（SCSS記法）設計：`@use`ベースの構造に対応
-- StyleLint、ESLint、Markuplintによるコードチェック
-- Prettierによるコード整形
-- TypeScriptの導入
-- Vue.js（Piniaプラグイン対応）・React・jQuery対応
-- ソースコードのminify・ビルド対応
-- Astroのローカルサーバー起動＆ホットリロード
-- Markdownファイルを使ったコンテンツ管理とルーティング
-- 相対パスの自動変換機能（HTMLビルド時）
+ - 街角カフェ香里園店のHP
 
 ## 現在の開発状況（メモ）
 
-- フォルダ構成とSass設計（変数・mixin・ユーティリティ）を整理
-- TailwindCSSは削除し、Bootstrap Grid + 自作ユーティリティに統一
-- JavaScript（ページ単位の動的処理）の運用方針を検討中
 
 ## Requirement
 

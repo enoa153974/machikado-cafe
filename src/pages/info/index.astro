@@ -6,7 +6,7 @@ import Gallery from '../../components/Gallery.astro';
 import FeaturesSpec from '../../components/FeaturesSpec.astro';
 import Contact from '../../components/Contact.astro';
 
-const pageId = 'sample',
+const pageId = 'info',
     pageMeta = siteData[pageId],
     ldJSON = [
         {
@@ -14,12 +14,12 @@ const pageId = 'sample',
             position: 2,
             item: {
                 '@id': `${import.meta.env.PUBLIC_ENVURL}${pageMeta.path}`,
-                name: 'sample'
+                name: 'info'
             }
         }
     ];
 
-const currentPath = '/sample'; 
+const currentPath = '/info'; 
 
 
 ---
@@ -35,7 +35,7 @@ const currentPath = '/sample';
     ldJSON={ldJSON}
     currentPath={currentPath}
 >
-    <HeroSample />
+<!--     <HeroSample />
     <Gallery
         title="ギャラリー"
         gallerys={[
@@ -54,7 +54,7 @@ const currentPath = '/sample';
         ]}
     />
     <FeaturesSpec />
-    <Contact />
+    <Contact /> -->
 </BaseLayout>
         <!-- 各jsを初期化するsample.jsの読み込み -->
         <script type="module" src="/assets/scripts/ui/sample.js"></script>
