@@ -18,25 +18,28 @@ const { class: className, currentPath,isTopPage } = Astro.props;
             <!-- PCナビ -->
             <div class="flex flex-col w-full">
                 <nav class="header__nav pc-nav">
-                        <ul class="header__nav-inner flex justify-end font-bold color-white pr-8">
-                            <a href={siteData.home.path}><img src="/assets/images/coffee-icon.png" alt=""  class="header__nav-icon block" /></a>
-
-                            <li class="header__text">
-                                <a href={siteData.info.path} class={currentPath === '/info' ? 'is-active' : ''}>店舗情報</a>
-                            </li>
-                            <li class="header__text">
-                                <a href={siteData.intro.path} class={currentPath === '/intro' ? 'is-active' : ''}>お店の紹介</a>
-                            </li>
-                            <li class="header__text">
-                                <a href={siteData.menu.path} class={currentPath === '/menu' ? 'is-active' : ''}>メニュー</a>
-                            </li>
-                            <li class="header__text">
-                                <a href={siteData.news.path} class={currentPath === '/news' ? 'is-active' : ''}>お知らせ</a>
-                            </li>
+                        <ul class="header__nav-inner l-row font-bold color-white">
+                            <div class="l-column l-column--3">
+                                <li><a href={siteData.home.path}><img src="/assets/images/coffee-icon.png" alt=""  class="header__nav-icon block" /></a></li>
+                            </div>
+                            <div class="l-column l-column--9 l-row text-center items-center">
+                                <li class="header__text l-column l-column--3">
+                                    <a href={siteData.info.path} class={currentPath === '/info' ? 'is-active' : ''}>店舗情報</a>
+                                </li>
+                                <li class="header__text l-column l-column--3">
+                                    <a href={siteData.intro.path} class={currentPath === '/intro' ? 'is-active' : ''}>お店の紹介</a>
+                                </li>
+                                <li class="header__text l-column l-column--3">
+                                    <a href={siteData.menu.path} class={currentPath === '/menu' ? 'is-active' : ''}>メニュー</a>
+                                </li>
+                                <li class="header__text l-column l-column--3">
+                                    <a href={siteData.news.path} class={currentPath === '/news' ? 'is-active' : ''}>お知らせ</a>
+                                </li>
+                            </div>    
                         </ul>
                 </nav>
-            <a href={siteData.home.path} class="header__logo text-right color-white"><h1 class="pr-8">machikado cafe</h1></a>
-                            </div>
+                    <a href={siteData.home.path} class="header__logo text-right color-white"><h1 class="pr-8">machikado cafe</h1></a>
+        </div>
 
             <!-- スマホナビ -->
             <nav id="global-nav" class="sp-nav font-bold">

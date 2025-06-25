@@ -5,6 +5,12 @@
         height: 100%;
 
         p {
+
+            &:hover{
+                color:#333 ;
+                transition: color 0.8s ease;
+            }
+
             @media (max-width: 47.9375rem) {
                 font-size: 13px;
             }
