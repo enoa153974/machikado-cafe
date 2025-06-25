@@ -8,18 +8,18 @@
 }
 
 .header {
-    &__logo {
-        img {
-            width: 80%;
+    background-image: url('/public/assets/images/header_bg.png');
+    background-size: cover;
 
-            @media (max-width: 47.9375rem) {
-                width: 60%;
-            }
-        }
+    &__logo{
+        line-height: 1.3;
     }
-
     &__nav {
-        margin-left: auto;
+        width: 100%;
+        
+        .header__nav-icon{
+            width: 3rem;
+        }
 
         li {
             white-space: nowrap;
@@ -32,8 +32,9 @@
 
     &__nav-inner {
         width: 100%;
-        height: 100%;
+        height: auto;
         gap: 2rem;
+        font-size: 1.5rem;
 
         .header__text {
             position: relative;
@@ -50,7 +51,7 @@
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: -2px;
+                bottom: -4px;
                 width: 100%;
                 height: 2px;
                 background-color: var(--text-color-sub);
