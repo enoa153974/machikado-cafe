@@ -1,5 +1,6 @@
 ---
 import Card from './Card.astro';
+import Button from '../components/Button';
 ---
 
 <section class="card-box l-wrapper">
@@ -28,7 +29,9 @@ import Card from './Card.astro';
                     className="card-box__card-item"
                 />
             </div>
+            <Button href="/menu" className="menu__btn" variant="push">
+                <span>その他のメニュー</span>
+            </Button>
         </div>
     </div>
 </section>
-
