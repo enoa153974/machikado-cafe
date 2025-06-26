@@ -1,0 +1,37 @@
+.card-box__card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 16px;
+}
+
+.card-box__card-item{
+    padding: 0.5rem;
+    .img__wrapper{
+        width: 90%;
+    }
+    .card__text{
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+.card-box__card-item--01 
+    .img__wrapper{
+            width: 80%;
+    }
+
+.card p:last-child {//どこかのプロパティの打ち消し
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .card-box__card {
+        grid-template-columns: 1fr; // スマホでは1カラム
+
+        .card-box__card-item{
+            .img__wrapper{
+                max-height: auto;
+            }
+        }
+    }
+}

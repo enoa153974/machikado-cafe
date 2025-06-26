@@ -58,9 +58,23 @@ const isTopPage = url.pathname === '/';
     </head>
 
     <body class="has-fixed-header">
-        <Header currentPath={currentPath}  class={isTopPage ? 'header header--top' : 'header'}  isTopPage={isTopPage} />
+        <Header currentPath={currentPath} class={isTopPage ? 'header header--top' : 'header'} isTopPage={isTopPage} />
 
-        <main>
+        <main class={isTopPage ? 'main main--2col' : 'main main--1col'}>
+            {
+                isTopPage ? (
+                    <div class="l-row">
+                        <div class="l-column l-column--8">
+                            <slot name="main" />
+                        </div>
+                        <div class="l-column l-column--4">
+                            <slot name="side" />
+                        </div>
+                    </div>
+                ) : (
+                    <slot />
+                )
+            }
             <slot />
         </main>
 
@@ -71,6 +85,5 @@ const isTopPage = url.pathname === '/';
         <script is:inline src="/assets/scripts/libs/slick.min.js"></script>
 
         <script is:inline src="/assets/scripts/ui/main.js"></script>
-
     </body>
 </html>

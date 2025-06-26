@@ -1,12 +1,14 @@
 ---
 import siteData from '../../siteData.mjs';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
+import Gallery from '../components/Gallery.astro';
+import Cardbox from '../components/Cardbox.astro';
 import Features from '../components/Features.astro';
 import CTA from '../components/CTA.astro';
 import FaqSection from '../components/FaqSection.astro';
 import Voices from '../components/Voices.astro';
 import TabbedSection from '../components/TabbedSection.astro';
+
 
 const pageId = 'home',
     pageMeta = siteData[pageId],
@@ -21,10 +23,10 @@ const pageId = 'home',
         }
     ];
 
-const currentPath = '/'; 
+const currentPath = '/';
 ---
 
-<!--BaseLayout.hemlの<slot />内に代入される -->
+<!--BaseLayout.hemlの<main />と<side />内に代入される -->
 <BaseLayout
     pageName={pageId}
     title={pageMeta.title}
@@ -35,7 +37,33 @@ const currentPath = '/';
     ldJSON={ldJSON}
     currentPath={currentPath}
 >
-<!--     <Hero />
+    <Fragment slot="main">
+        <!-- メインコンテンツ -->
+        <Gallery
+            title="ギャラリー"
+            gallerys={[
+                {
+                    image: '/assets/images/tentou_01.JPG',
+                    alt: ''
+                },
+                {
+                    image: '/assets/images/tentou_02.JPG',
+                    alt: ''
+                },
+                {
+                    image: '/assets/images/tentou_03.JPG',
+                    alt: ''
+                }
+            ]}
+        /> 
+
+        <Cardbox />
+    </Fragment>
+    
+    <Fragment slot="side">
+        <!-- サイドコンテンツ -->
+    </Fragment>
+    <!--     <Hero />
 
     <Features
         title="見出しh2"

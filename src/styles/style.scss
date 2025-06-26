@@ -23,13 +23,7 @@
  * ---------------------------- */
 @use 'components/common/header';
 @use 'components/common/footer';
-/* -------------------------------
- *  file import (components/section)
- * ---------------------------- */
-@use 'components/sections/hero';
-@use 'components/sections/features';
-@use 'components/sections/voices';
-@use 'components/sections/hero-sample';
+
 /* -------------------------------
  *  file import (components/ui)
  * ---------------------------- */
@@ -47,6 +41,17 @@
 @use 'components/ui/tab-menu';
 /* パンくずリストのcss */
 @use 'components/ui/breadcrumb';
+/* カードのcss */
+@use 'components/ui/card';
+
+/* -------------------------------
+ *  file import (components/section)
+ * ---------------------------- */
+@use 'components/sections/card-box';
+@use 'components/sections/hero';
+@use 'components/sections/features';
+@use 'components/sections/voices';
+@use 'components/sections/hero-sample';
 
 /* -------------------------------
  *  file import (utility)

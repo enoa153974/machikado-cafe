@@ -1,0 +1,33 @@
+.card,
+.card * {
+    box-sizing: border-box;
+}
+
+.card {
+    width: 100%;
+    border: solid 3px var(--accent-color);
+    border-radius: 1rem;
+
+    .img__wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    &__text {
+        width: 100%;
+        padding: 1rem;
+        border-bottom-left-radius: 28px;
+        border-bottom-right-radius: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+
+}

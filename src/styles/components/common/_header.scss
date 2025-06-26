@@ -96,10 +96,12 @@
 }
 
 .header--top{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            url('/assets/images/hp_top.png');
-    background-color: brown;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)),
+        url('/assets/images/hp_top.png');
+    background-color: 	#4E342E;
+    background-size: 100%;
+    background-repeat: no-repeat;
     height: 100vh;
     align-items: flex-start;
     padding: 2rem;
