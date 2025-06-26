@@ -31,37 +31,24 @@ interface gallerys {
 const { title, gallerys } = Astro.props as Props;
 ---
 
-<section class="gallery l-wrapper pt-10 px-8 sm:pt-8">
+<section class="gallery l-wrapper py-8 px-10 sm:pt-8">
     <div class="l-container">
-        <div class="slider l-inner">
-            <h2 class="gallery__heading u-heading-line font-bold">{title}</h2>
-            <div class="slider__wrapper flex flex-col pt-8 sm:pt-0">
-                <div class="slider__track autoplay sm:justify-center">
-                    {
-                        gallerys.map((gallerys: gallerys, i: number) => (
-                            <div>
-                                <div class="img__wrapper block">
-                                    <img src={gallerys.image} alt={gallerys.alt} class="block" />
-                                </div>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
+        <h2 class="gallery__heading u-heading-line font-bold">{title}</h2>
 
-            <div class="slider__dots flex justify-center items-center"></div>
+        <div class="slider__wrapper py-8 px-10 sm:pt-0">
+            <div class="slider autoplay slider__track">
+                {
+                    gallerys.map((gallerys: gallerys, i: number) => (
+                        <div class="card">
+                            <div class="card__inner">
+                                <img src={gallerys.image} alt={gallerys.alt} class="block" />
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
+
+        <div class="slider__dots flex justify-center items-center"></div>
     </div>
 </section>
-
-<style>
-    @media screen and (width <=47.9375rem) {
-        .gallery {
-            width: 100%;
-        }
-        .gallery__heading {
-            font-size: 22px;
-            padding-bottom: 0.5rem;
-        }
-    }
-</style>

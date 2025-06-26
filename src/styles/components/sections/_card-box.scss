@@ -27,11 +27,20 @@
 @media (max-width: 767px) {
     .card-box__card {
         grid-template-columns: 1fr; // スマホでは1カラム
+        gap: 16px;
 
         .card-box__card-item{
             .img__wrapper{
-                max-height: auto;
+                width: 95%;
+
+
             }
         }
+    }
+
+    
+.card-box__card-item--01 
+    .img__wrapper{
+            width: 100%;
     }
 }

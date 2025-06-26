@@ -84,6 +84,7 @@ const isTopPage = url.pathname === '/';
         <script is:inline src="/assets/scripts/libs/jquery-3.7.1.min.js"></script>
         <script is:inline src="/assets/scripts/libs/slick.min.js"></script>
 
-        <script is:inline src="/assets/scripts/ui/main.js"></script>
+        <!-- 各jsを初期化するmain.jsの読み込み -->
+        <script type="module" src="/assets/scripts/ui/main.js"></script>
     </body>
 </html>
