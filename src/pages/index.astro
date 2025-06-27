@@ -71,28 +71,44 @@ const currentPath = '/';
 
     <Fragment slot="side">
         <!-- サイドコンテンツ -->
-            <News
-        text="お知らせ"
-        subtitle="News"
-        buttonHref="/news"
-        newsItems={[
-            {
-                date: '2023.05.15',
-                category: '新メニュー',
-                title: 'プレミアムな新作クレープが2種類追加！'
-            },
-            {
-                date: '2023.04.05',
-                category: '新メニュー',
-                title: '新発売！ガーリックバターポテト'
-            },
-            {
-                date: '2023.01.19',
-                category: '新メニュー',
-                title: '新発売！いちごショコラクリーム'
-            }
-        ]}
-    />
+        <News
+            text="お知らせ"
+            subtitle="News"
+            buttonHref="/news"
+            newsItems={[
+                {
+                    date: '2023.05.15',
+                    category: '新メニュー',
+                    title: 'プレミアムな新作クレープが2種類追加！'
+                },
+                {
+                    date: '2023.04.05',
+                    category: '新メニュー',
+                    title: '新発売！ガーリックバターポテト'
+                },
+                {
+                    date: '2023.01.19',
+                    category: '新メニュー',
+                    title: '新発売！いちごショコラクリーム'
+                }
+            ]}
+        />
+            <section class="shop-intro--top mt-10">
+                <h2 class="u-heading-line text-center mb-6">お店の紹介</h2>
+                <div class="img-wrapper rounded-lg">
+                    <img src="/assets/images/tentou_01.JPG" alt="machikado cafe" class="">
+                </div>
+                <p class="py-2">machikado cafeは、こだわりのクレープとおいしいコーヒーが楽しめる、 ゆったりとした雰囲気のカフェです。アルプラザ香里園の1階フードコート内にあるお店です。</p>
+            </section>
+
+            <section class="cta--sns mt-20">
+                <h2 class="u-heading-line text-center mb-6">SNS</h2>
+                <h3 class="text-center">Instagram</h3>
+                <div class="img-wrapper">
+                    <img src="/assets/images/machikadocafe_kourienn_qr.png" alt="">
+                </div>
+                <button>ボタン</button>
+            </section>
     </Fragment>
     <!--     <Hero />
 
