@@ -32,32 +32,3 @@ const { text, subtitle, newsItems, buttonHref } = Astro.props;
         </Button>
     </div>
 </div>
-
-<style>
-    .news {
-        height: auto;
-    }
-    .news-list {
-        width: 100%;
-    }
-    .news__container {
-        max-width: 980px;
-    }
-    .news__container > p {
-        font-size: 20px;
-    }
-    
-    @media screen and (max-width: 767px) {
-        .news {
-            height: auto;
-        }
-
-        .news__container > p {
-            font-size: 1rem;
-        }
-
-        .news__heading {
-            font-size: var(--font-size-lg);
-        }
-    }
-</style>

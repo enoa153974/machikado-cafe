@@ -1,3 +1,7 @@
+/* @use '../../foundation/import.scss' as *;
+    を各ファイルで読み込むことで
+    以下のファイルに定義した変数やmixinを使用できる */
+
 @forward 'function';
 @forward 'variables';
 @forward 'mixin';

@@ -4,8 +4,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Gallery from '../components/Gallery.astro';
 import Cardbox from '../components/Cardbox.astro';
 import News from '../components/News.astro';
-import CTA from '../components/CTA.astro';
-import FaqSection from '../components/FaqSection.astro';
+import ShopIntro from '../components/ShopIntro.astro';
+import SNSCTA from '../components/SNSCTA.astro';
 import Voices from '../components/Voices.astro';
 import TabbedSection from '../components/TabbedSection.astro';
 
@@ -93,22 +93,12 @@ const currentPath = '/';
                 }
             ]}
         />
-            <section class="shop-intro--top mt-10">
-                <h2 class="u-heading-line text-center mb-6">お店の紹介</h2>
-                <div class="img-wrapper rounded-lg">
-                    <img src="/assets/images/tentou_01.JPG" alt="machikado cafe" class="">
-                </div>
-                <p class="py-2">machikado cafeは、こだわりのクレープとおいしいコーヒーが楽しめる、 ゆったりとした雰囲気のカフェです。アルプラザ香里園の1階フードコート内にあるお店です。</p>
-            </section>
-
-            <section class="cta--sns mt-20">
-                <h2 class="u-heading-line text-center mb-6">SNS</h2>
-                <h3 class="text-center">Instagram</h3>
-                <div class="img-wrapper">
-                    <img src="/assets/images/machikadocafe_kourienn_qr.png" alt="">
-                </div>
-                <button>ボタン</button>
-            </section>
+        <ShopIntro />
+        <SNSCTA
+            text="Instagram"
+            buttonLabel="ボタン内テキスト"
+            buttonHref="移管先リンク"
+        />
     </Fragment>
     <!--     <Hero />
 

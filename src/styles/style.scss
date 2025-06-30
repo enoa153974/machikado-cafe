@@ -43,6 +43,8 @@
 @use 'components/ui/breadcrumb';
 /* カードのcss */
 @use 'components/ui/card';
+/* news-itemのcss */
+@use 'components/ui/news-item';
 
 /* -------------------------------
  *  file import (components/section)
@@ -52,6 +54,7 @@
 @use 'components/sections/features';
 @use 'components/sections/voices';
 @use 'components/sections/hero-sample';
+@use 'components/sections/sns-cta';
 
 /* -------------------------------
  *  file import (utility)
