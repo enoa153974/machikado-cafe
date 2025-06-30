@@ -20,14 +20,17 @@ const { text, buttonLabel, buttonHref } = Astro.props as CtaProps;
 
 <div class="cta--sns mt-20 px-10">
     <h2 class="u-heading-line text-center mb-6">SNS</h2>
-    <h3 class="text-center">{text}</h3>
+    <div class="cta--sns__inner mb-4 l-row">
+        <h3 class="l-column l-column--6">{text}</h3>
+        <Button href={buttonHref} className="cta__btn l-column l-column--6" variant="push">
+            <span>{buttonLabel}</span>
+        </Button>
+    </div>
         <Card
             imgSrc='/assets/images/machikadocafe_kourienn_qr.png'
             alt="Instagram"
-            text="follow me!"
+            text=""
             className='insta__card'
         />
-    <Button href={buttonHref} className="cta__btn" variant="push">
-        <span>{buttonLabel}</span>
-    </Button>
+
 </div>

@@ -1,16 +1,42 @@
 /* ボタンの上書きデザインを記述 */
-
+/*TOPページのmenuへの移管リンクボタン */
     .menu__btn{
         margin-left: auto;
         display: block;
         margin-top: 1.25rem;
     }
-    .menu__btn span,
-    .news__btn span{
+    .menu__btn span{
         background-color: var(--accent-color);
         color: #fff;
         width: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+/*TOPページのnewsへの移管リンクボタン */
+        .news__btn span{
+        background-color: var(--accent-color);
+        color: #fff;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/*TOPページのインスタへの移管リンクボタン */
+    .cta__btn{
+        margin-left: auto;
+        display: block;
+    }
+
+    .cta__btn span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
     }
