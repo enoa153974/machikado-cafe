@@ -11,6 +11,10 @@ body {
     color: #333;
 }
 
+main{
+    padding-top: 3rem;
+}
+
 body.no-scroll {
     overflow: hidden;
     height: 100%;
@@ -41,7 +45,7 @@ a {
 
 .map {
     /*マップの設定*/
-    margin-top: 20px;
+    margin: 20px auto;
 }
 
 .map iframe {
@@ -51,6 +55,3 @@ a {
     /*アスペクト比（縦横比）を指定*/
     margin-bottom: 50px;
 }
-
-/* === スマホ表示(ブレイクポイント767px) === */
-@media screen and (width <=47.9375rem) {}

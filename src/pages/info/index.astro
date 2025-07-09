@@ -1,10 +1,8 @@
 ---
 import siteData from '../../../siteData.mjs';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroSample  from '../../components/HeroSample.astro';
+import Info  from '../../components/Info.astro';
 import Gallery from '../../components/Gallery.astro';
-import FeaturesSpec from '../../components/FeaturesSpec.astro';
-import Contact from '../../components/Contact.astro';
 
 const pageId = 'info',
     pageMeta = siteData[pageId],
@@ -35,27 +33,6 @@ const currentPath = '/info';
     ldJSON={ldJSON}
     currentPath={currentPath}
 >
-<!--     <HeroSample />
-    <Gallery
-        title="ギャラリー"
-        gallerys={[
-            {
-                image: '/assets/image/sample_img.jpg',
-                alt: ''
-            },
-            {
-                image: '/assets/image/sample_img.jpg',
-                alt: ''
-            },
-            {
-                image: '/assets/image/sample_img.jpg',
-                alt: ''
-            }
-        ]}
-    />
-    <FeaturesSpec />
-    <Contact /> -->
+        <Info />
 </BaseLayout>
-        <!-- 各jsを初期化するsample.jsの読み込み -->
-        <script type="module" src="/assets/scripts/ui/sample.js"></script>
 

@@ -10,10 +10,10 @@ const { imgSrc, alt, text, className = '' } = Astro.props;
 ---
 
 <div class={`card flex flex-col items-center ${className} sm:justify-between`}>
-    <div class="img__wrapper img-wrapper">
-        <img src={imgSrc} alt={alt} class="card__img" />
-    </div>
-    <p class="card__text text-center">{text}</p>
+        <div class="img__wrapper img-wrapper">
+            <img src={imgSrc} alt={alt} class="card__img" />
+        </div>
+        <p class="card__text text-center">{text}</p>
 </div>
 
 
