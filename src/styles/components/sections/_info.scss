@@ -1,5 +1,10 @@
-.map {
+.info__map {
     margin: 0;
+
+    iframe {
+        width: 100%;
+        aspect-ratio: 1/ 1;
+    }
 }
 
 .info__block {
@@ -42,7 +47,7 @@
                 font-size: 12px;
                 opacity: 0;
                 visibility: hidden;
-                transition: opacity 0.5s ease;
+                transition: opacity 0.6s ease;
                 z-index: 5;
 
                 &::after {
@@ -61,7 +66,7 @@
 
         }
 
-        .cash-hint{
+        .cash-hint {
             font-size: 1rem;
         }
     }
