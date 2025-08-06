@@ -1,0 +1,26 @@
+.grid__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.menu p+p{
+    margin: 0;
+}
+
+.menu.card-box__card-item{
+    p:nth-child(2){
+        font-size: 1.25rem;
+        font-weight: var(--font-weight-bold);
+        padding: 0;
+    }
+        p:nth-child(3){
+        font-size: 1.25rem;
+        padding: 0;
+        color: red;
+    }
+    .menu__price::after{
+        content: "(税込)";
+        font-size: 0.8em;
+    }
+}

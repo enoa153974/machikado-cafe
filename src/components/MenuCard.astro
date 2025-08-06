@@ -3,17 +3,18 @@ interface Props {
     imgSrc: string;
     alt: string;
     text: string;
+    price:string;
     className?: string;
 }
 
 const { imgSrc, alt, text, price, className = '' } = Astro.props;
 ---
 
-<div class={`card flex flex-col items-center ${className} sm:justify-between`}>
-        <div class="img__wrapper img-wrapper">
+<div class={`card flex flex-col items-center ${className} py-4 sm:justify-between`}>
+        <div class="img__wrapper img-wrapper img-wrapper--aspect-1-1 flex items-center justify-center mb-4">
             <img src={imgSrc} alt={alt} class="card__img" />
         </div>
         <p class="card__text text-center">{text}</p>
+        <p class=" menu__price card__text text-center">{price}yen</p>
 </div>
-
 

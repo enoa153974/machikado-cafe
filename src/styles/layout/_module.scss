@@ -190,6 +190,7 @@ $base-gap-size: var(--space-R) !default;
             width: column-width(12, 0);
         }
     }
+}
 
 /* ========================================
     ▼ 画像ラッパー
@@ -224,5 +225,4 @@ $base-gap-size: var(--space-R) !default;
     &--shadow {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-}
 }

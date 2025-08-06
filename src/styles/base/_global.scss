@@ -15,9 +15,6 @@ body {
     color: #333;
 }
 
-main {
-    padding-top: 3rem;
-}
 
 body.no-scroll {
     overflow: hidden;
@@ -46,6 +43,10 @@ a {
     color: inherit;
 }
 
+/* 段落間の行間 */
+p+p{
+    margin-top: 1em;
+}
 
 .map {
     /*マップの設定*/

@@ -2,7 +2,7 @@
 import siteData from '../../../siteData.mjs';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
-import FaqSectionCategory from '../../components/FaqSectionCategory.astro';
+import Menu from '../../components/Menu.astro';
 
 const pageId = 'menu',
     pageMeta = siteData[pageId],
@@ -31,7 +31,9 @@ const currentPath = '/menu';
     ldJSON={ldJSON}
     currentPath={currentPath}
 >
-<!--     <Hero />
+    <Hero />
+    <Menu />
+<!--
 
     <FaqSectionCategory
         title=""
