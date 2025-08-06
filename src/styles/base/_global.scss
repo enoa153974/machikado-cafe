@@ -4,6 +4,10 @@
 } === */
 
 /* ベース */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-jp);
     font-size: var(--font-size-base);
@@ -11,7 +15,7 @@ body {
     color: #333;
 }
 
-main{
+main {
     padding-top: 3rem;
 }
 
@@ -54,4 +58,9 @@ a {
     aspect-ratio: 16/9;
     /*アスペクト比（縦横比）を指定*/
     margin-bottom: 50px;
+}
+
+/* 共通のセクションに対して余白を調整 */
+section[id] {
+    scroll-margin-top: 250px; // ← ヘッダーの高さに合わせて調整してね！
 }

@@ -1,7 +1,7 @@
 ---
 import siteData from '../../../siteData.mjs';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Hero from '../../components/Hero.astro';
+import Intro from '../../components/Intro.astro';
 import FaqSectionCategory from '../../components/FaqSectionCategory.astro';
 
 const pageId = 'intro',
@@ -31,6 +31,7 @@ const currentPath = '/intro';
     ldJSON={ldJSON}
     currentPath={currentPath}
 >
+<Intro />
 <!--     <Hero />
 
     <FaqSectionCategory
