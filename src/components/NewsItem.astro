@@ -4,16 +4,28 @@ interface Props {
     date: string;
     category: string;
     title: string;
+    image?: string;
+    slug?: string;
 }
 
-const { date, category, title } = Astro.props;
+const { date, category, title, image, slug } = Astro.props;
 const categoryClass = category === '新情報' ? 'badge--release' : 'badge--notice';
 ---
 
-<div class="news-item flex flex-col items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0">
-    <div class="news-item__inner flex items-center justify-center">
-        <div class="news-date font-bold">{date}</div>
-        <span class={`news-badge text-center ${categoryClass}`}>{category}</span>
-    </div>
-    <div class="news-title font-bold pl-2">{title}</div>
+<div class="news-item">
+    <a
+        href={slug ? `/news/${slug}` : '#'}
+        class="news-item__inner l-row l-row--gap py-6 px-6 sm:pt-3 sm:pb-3 sm:px-0"
+    >
+        <div class="l-column l-column--4 img-wrapper img-wrapper--aspect-1-1 rounded">
+            <img src={image} alt=""/>
+        </div>
+        <div class="l-column l-column--2 flex flex-col justify-center">
+            <div class="news-date font-bold">{date}</div>
+            <span class={`news-badge text-center ${categoryClass}`}>{category}</span>
+        </div>
+        <div class="news-title font-bold l-column l-column--6 flex items-center">
+            <p>{title}</p>
+        </div>
+    </a>
 </div>

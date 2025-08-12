@@ -3,11 +3,10 @@ import siteData from '../../siteData.mjs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Gallery from '../components/Gallery.astro';
 import Cardbox from '../components/Cardbox.astro';
-import News from '../components/News.astro';
+import NewsPage from '../components/NewsPage.astro';
 import ShopIntro from '../components/ShopIntro.astro';
 import SNSCTA from '../components/SNSCTA.astro';
-import Voices from '../components/Voices.astro';
-import TabbedSection from '../components/TabbedSection.astro';
+
 
 const pageId = 'home',
     pageMeta = siteData[pageId],
@@ -71,33 +70,8 @@ const currentPath = '/';
 
     <Fragment slot="side">
         <!-- サイドコンテンツ -->
-        <News
-            text="お知らせ"
-            subtitle="News"
-            buttonHref="/news"
-            newsItems={[
-                {
-                    date: '2023.05.15',
-                    category: '新メニュー',
-                    title: 'プレミアムな新作クレープが2種類追加！'
-                },
-                {
-                    date: '2023.04.05',
-                    category: '新メニュー',
-                    title: '新発売！ガーリックバターポテト'
-                },
-                {
-                    date: '2023.01.19',
-                    category: '新メニュー',
-                    title: '新発売！いちごショコラクリーム'
-                }
-            ]}
-        />
+        <NewsPage wrapperClass="news-page--top" />
         <ShopIntro />
-        <SNSCTA
-            text="Instagram"
-            buttonLabel="follow me!"
-            buttonHref="移管先リンク"
-        />
+        <SNSCTA text="Instagram" buttonLabel="follow me!" buttonHref="移管先リンク" />
     </Fragment>
 </BaseLayout>

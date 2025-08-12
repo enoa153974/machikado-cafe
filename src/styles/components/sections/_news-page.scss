@@ -1,5 +1,38 @@
-.news-page{
-    .news-page__card{
-        background-color: 	#d3d3d3;
+.news-page {
+
+    button {
+        display: none;
+    }
+    
+}
+
+/* topページのnews欄デザイン */
+.news-page.news-page--top {
+
+
+    .l-inner {
+        padding: 0;
+
+        .news-page__card {
+            gap: 0;
+            background-color: #fff;
+            padding: 32px 40px 32px 0;
+
+            .l-column--4 {
+                width: 0;
+            }
+
+            .l-column--2 {
+                width: 50%;
+            }
+
+            .l-column--6 {
+                width: 100%;
+            }
+
+            .img-wrapper {
+                display: none;
+            }
+        }
     }
 }

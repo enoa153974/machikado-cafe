@@ -2,7 +2,9 @@
 import siteData from '../../../siteData.mjs';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import NewsPage from '../../components/NewsPage.astro';
-import FaqSectionCategory from '../../components/FaqSectionCategory.astro';
+import { getNewsItems } from '../../lib/news';
+
+const newsItems = await getNewsItems(); // 全件
 
 const pageId = 'news',
     pageMeta = siteData[pageId],
@@ -31,5 +33,5 @@ const currentPath = '/news';
     ldJSON={ldJSON}
     currentPath={currentPath}
 >
-<NewsPage />
+    <NewsPage />
 </BaseLayout>

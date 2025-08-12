@@ -1,50 +1,39 @@
 ---
-import NewsItem from '../components/NewsItem.astro';
+import siteData from '../../siteData.mjs';
+import News from '../components/News.astro';
+import { getCollection } from 'astro:content';
+import Button from '../components/Button';
+
+const news = await getCollection('news');
+const sorted = news.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const newsItems = sorted.map((item) => ({
+    date: item.data.date,
+    category: item.data.category,
+    title: item.data.title,
+    image: item.data.image ?? '',
+    slug: item.slug
+}));
+
+interface Props {
+    wrapperClass?: string;
+}
+
+const { wrapperClass = '' } = Astro.props;
 ---
 
-<section class="news-page l-wrapper py-20">
+<section class={`${wrapperClass} news-page l-wrapper py-8 mt-20`}>
     <div class="l-container">
         <div class="l-inner">
-            <div class="news-page__card l-row l-row--gap py-4 px-4 mb-8 rounded-lg">
-                <div class="l-column l-column--3">
-                    <div class="img-wrapper img-wrapper--aspect-1-1 rounded">
-                        <img src="/public/assets/images/winter2022.jpg" alt="" />
-                    </div>
+            <h2 class="u-heading-line">お知らせ</h2>
+            <div class="news-page__card px-6 py-6 mb-8">
+                <div class="flex flex-col justify-center">
+                    <News newsItems={newsItems} />
                 </div>
-                <div class="l-column l-column--9 flex flex-col justify-center">
-                    <NewsItem
-                        date="2023.05.15"
-                        category="お知らせ"
-                        title="新メニューのいちごショコラクリームが発売！"
-                    />
-                </div>
-            </div>
-            <div class="news-page__card l-row l-row--gap py-4 px-4 mb-8 rounded-lg">
-                <div class="l-column l-column--3">
-                    <div class="img-wrapper img-wrapper--aspect-1-1 rounded">
-                        <img src="/public/assets/images/winter2022.jpg" alt="" />
-                    </div>
-                </div>
-                <div class="l-column l-column--9 flex flex-col justify-center">
-                    <NewsItem
-                        date="2023.05.15"
-                        category="お知らせ"
-                        title="新メニューのいちごショコラクリームが発売！"
-                    />
-                </div>
-            </div>
-            <div class="news-page__card l-row l-row--gap py-4 px-4 mb-8 rounded-lg">
-                <div class="l-column l-column--3">
-                    <div class="img-wrapper img-wrapper--aspect-1-1 rounded">
-                        <img src="/public/assets/images/winter2022.jpg" alt="" />
-                    </div>
-                </div>
-                <div class="l-column l-column--9 flex flex-col justify-center">
-                    <NewsItem
-                        date="2023.05.15"
-                        category="お知らせ"
-                        title="新メニューのいちごショコラクリームが発売！"
-                    />
+                <div class="flex justify-center">
+                    <Button href={siteData.news.path} className="news__btn" variant="push">
+                        <span>お知らせ一覧へ</span>
+                    </Button>
                 </div>
             </div>
         </div>

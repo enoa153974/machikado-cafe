@@ -1,34 +1,23 @@
 ---
-// components/News.astro
 import NewsItem from './NewsItem.astro';
-import Button from './Button';
 
-interface NewsItemData {
-    date: string;
-    category: string;
-    title: string;
-}
 
 interface Props {
-    text: string;
-    subtitle: string;
-    newsItems: NewsItemData[];
-    buttonHref: string;
+    newsItems?: {
+        date: string;
+        category: string;
+        title: string;
+        slug?: string;
+    }[];
 }
 
-const { text, subtitle, newsItems, buttonHref } = Astro.props;
+const {newsItems = [] } = Astro.props;
 ---
 
 <div class="news l-wrapper items-center mt-20 sm:pt-0 pb-0">
-    <div class="news__container l-container flex flex-col items-center py-8 px-10 sm:pt-14">
-        <h2 class="news__heading font-bold pb-6 u-heading-line w-full text-center sm:mb-4">{text}</h2>
-
+    <div class="news__container l-container flex flex-col items-center sm:pt-14">
         <div class="news-list w-full mb-8 sm:mb-6">
             {newsItems.map((item) => <NewsItem {...item} />)}
         </div>
-
-        <Button href={buttonHref} className="news__btn" variant="push">
-            <span>お知らせ一覧へ</span>
-        </Button>
     </div>
 </div>
