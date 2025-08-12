@@ -15,7 +15,7 @@ const {newsItems = [] } = Astro.props;
 ---
 
 <div class="news l-wrapper items-center mt-20 sm:pt-0 pb-0">
-    <div class="news__container l-container flex flex-col items-center sm:pt-14">
+    <div class="news__container l-container flex flex-col items-center sm:pt-0">
         <div class="news-list w-full mb-8 sm:mb-6">
             {newsItems.map((item) => <NewsItem {...item} />)}
         </div>

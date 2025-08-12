@@ -15,16 +15,16 @@ const categoryClass = category === '新情報' ? 'badge--release' : 'badge--noti
 <div class="news-item">
     <a
         href={slug ? `/news/${slug}` : '#'}
-        class="news-item__inner l-row l-row--gap py-6 px-6 sm:pt-3 sm:pb-3 sm:px-0"
+        class="news-item__inner l-row l-row--gap py-6 px-6 sm:pt-3 sm:pb-3 sm:px-0 sm:flex-col sm:items-center"
     >
-        <div class="l-column l-column--4 img-wrapper img-wrapper--aspect-1-1 rounded">
+        <div class="l-column l-column--4 img-wrapper img-wrapper--aspect-16-9 rounded">
             <img src={image} alt=""/>
         </div>
         <div class="l-column l-column--2 flex flex-col justify-center">
             <div class="news-date font-bold">{date}</div>
             <span class={`news-badge text-center ${categoryClass}`}>{category}</span>
         </div>
-        <div class="news-title font-bold l-column l-column--6 flex items-center">
+        <div class="news-title font-bold l-column l-column--6 flex items-center sm:justify-center">
             <p>{title}</p>
         </div>
     </a>

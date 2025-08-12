@@ -7,7 +7,7 @@ export type NewsItem = {
     title: string;     // 記事タイトル
     date: string;      // 表示・ソート用に統一した日付
     category: string;  // カテゴリ名
-    image: string,
+    image: string,     // 見出し画像
     slug: string;      // 記事スラッグ（URL用）
 };
 

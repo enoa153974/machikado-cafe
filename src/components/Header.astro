@@ -38,7 +38,7 @@ const { class: className, currentPath,isTopPage } = Astro.props;
                             </div>    
                         </ul>
                 </nav>
-                    <a href={siteData.home.path} class="header__logo text-right color-white"><h1 class="pr-8">machikado cafe</h1></a>
+                    <a href={siteData.home.path} class="header__logo text-right color-white sm:flex sm:flex-col sm:justify-center"><h1 class="pr-8 sm:pr-0 sm:pt-3">machikado cafe</h1></a>
         </div>
 
             <!-- スマホナビ -->
@@ -48,7 +48,7 @@ const { class: className, currentPath,isTopPage } = Astro.props;
                     <li><a href={siteData.info.path}>店舗情報</a></li>
                     <li><a href={siteData.intro.path}>お店の紹介</a></li>
                     <li><a href={siteData.menu.path}>メニュー</a></li>
-                    <li><a href={siteData.intro.path}>お知らせ</a></li>
+                    <li><a href={siteData.news.path}>お知らせ</a></li>
                 </ul>
             </nav>
         </div>

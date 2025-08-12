@@ -1,3 +1,5 @@
+@use '../../foundation/import.scss' as *;
+
 .footer {
     height: var(--footer-height);
 
@@ -5,19 +7,30 @@
         height: 100%;
 
         p {
-
-            &:hover{
-                color:#333 ;
+            &:hover {
+                color: #333;
                 transition: color 0.8s ease;
             }
 
-            @media (max-width: 47.9375rem) {
+            @include media-query(md) {
+                font-size:13px;
+            }
+        }
+
+        span {
+            @include media-query(md) {
+                display: none;
+            }
+        }
+
+        small {
+            @include media-query(md) {
                 font-size: 13px;
             }
         }
     }
 
-    @media (max-width: 47.9375rem) {
+    @include media-query(md) {
         height: var(--sp-footer-height);
     }
 }

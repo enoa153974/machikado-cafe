@@ -31,11 +31,11 @@ interface gallerys {
 const { title, gallerys } = Astro.props as Props;
 ---
 
-<section class="gallery l-wrapper pt-8 px-10 mt-20 sm:pt-8">
+<section class="gallery l-wrapper pt-8 px-10 mt-20 sm:pt-4 sm:mt-4 sm:px-4">
     <div class="l-container">
         <h2 class="gallery__heading u-heading-line font-bold">{title}</h2>
 
-        <div class="slider__wrapper py-8 px-10 sm:pt-0">
+        <div class="slider__wrapper py-8 px-10 sm:py-0 sm:px-0">
             <div class="slider autoplay slider__track">
                 {
                     gallerys.map((gallerys: gallerys, i: number) => (

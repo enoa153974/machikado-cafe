@@ -1,15 +1,34 @@
-.news-page {
+@use '../../foundation/import.scss' as *;
 
-    button {
+.news-page {
+    @include media-query(md) {
+
+        .l-column--4 {
+            width: 100%;
+        }
+
+        .l-column--2 {
+            width: 60%;
+        }
+
+        .l-column--6 {
+            width: 100%;
+        }
+    }
+
+    .news-item__inner{
+        @include media-query(md){
+            gap: 1rem;
+        }
+    }
+
+    .news__btn {
         display: none;
     }
-    
 }
 
 /* topページのnews欄デザイン */
 .news-page.news-page--top {
-
-
     .l-inner {
         padding: 0;
 
@@ -17,6 +36,10 @@
             gap: 0;
             background-color: #fff;
             padding: 32px 40px 32px 0;
+
+            @include media-query(md) {
+                padding: 0;
+            }
 
             .l-column--4 {
                 width: 0;
@@ -32,6 +55,10 @@
 
             .img-wrapper {
                 display: none;
+            }
+
+            .news__btn {
+                display: flex;
             }
         }
     }

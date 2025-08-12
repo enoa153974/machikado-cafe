@@ -3,14 +3,19 @@ import siteData from '../../siteData.mjs';
 ---
 
 <footer class="footer bg-sub">
-    <div class="footer__inner l-container-full flex items-center justify-center">
-        <a href={siteData.info.path}><p class="color-white font-bold">店舗情報</p></a>
-        <span class="ml-4 mr-4 color-white">|</span>
-        <a href={siteData.intro.path}><p class="color-white font-bold">お店の紹介</p></a>
-        <span class="ml-4 mr-4 color-white">|</span>
-        <a href={siteData.menu.path}><p class="color-white font-bold">メニュー</p></a>
-        <span class="ml-4 mr-4 color-white">|</span>
-        <a href={siteData.news.path}><p class="color-white font-bold">お知らせ</p></a>
-
+    <div class="l-container py-4">
+        <div class="footer__inner l-inner flex items-center justify-center sm:flex-col">
+            <a href={siteData.info.path}><p class="color-white font-bold sm:py-1">店舗情報</p></a>
+            <span class="ml-4 mr-4 color-white">|</span>
+            <a href={siteData.intro.path}><p class="color-white font-bold sm:py-1">お店の紹介</p></a>
+            <span class="ml-4 mr-4 color-white">|</span>
+            <a href={siteData.menu.path}><p class="color-white font-bold sm:py-1">メニュー</p></a>
+            <span class="ml-4 mr-4 color-white">|</span>
+            <a href={siteData.news.path}><p class="color-white font-bold sm:py-1">お知らせ</p></a>
+        </div>
+        <div class="flex items-center justify-center pt-2">
+            <small class="color-white">&copy; 2025 machikado cafe. 無断転載を禁じます。</small>
+        </div>
     </div>
+
 </footer>

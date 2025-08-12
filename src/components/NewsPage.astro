@@ -22,12 +22,12 @@ interface Props {
 const { wrapperClass = '' } = Astro.props;
 ---
 
-<section class={`${wrapperClass} news-page l-wrapper py-8 mt-20`}>
-    <div class="l-container">
+<section class={`${wrapperClass} news-page l-wrapper py-8 mt-20 sm:py-4 sm:mt-4`}>
+    <div class="l-container sm:px-4">
         <div class="l-inner">
             <h2 class="u-heading-line">お知らせ</h2>
-            <div class="news-page__card px-6 py-6 mb-8">
-                <div class="flex flex-col justify-center">
+            <div class="news-page__card px-6 py-6 mb-8 sm:px-0">
+                <div class="flex flex-col justify-center sm:justify-start">
                     <News newsItems={newsItems} />
                 </div>
                 <div class="flex justify-center">

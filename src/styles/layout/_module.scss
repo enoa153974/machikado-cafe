@@ -3,7 +3,7 @@
 /* -------------------------------
  *  config
  * ---------------------------- */
-$container-gutter:15% !default;
+$container-gutter: 15% !default;
 $base-gap-size: var(--space-R) !default;
 
 /* -------------------------------
@@ -17,8 +17,8 @@ $base-gap-size: var(--space-R) !default;
     padding: 0 $container-gutter;
 }
 
-@include media-query(md){
-    .l-inner{
+@include media-query(md) {
+    .l-inner {
         padding: 0 1rem;
     }
 }
@@ -207,6 +207,7 @@ $base-gap-size: var(--space-R) !default;
         width: 100%;
         height: auto;
         object-fit: cover;
+        object-position: center;
     }
 
     &--aspect-16-9 {

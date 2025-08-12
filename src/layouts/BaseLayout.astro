@@ -63,7 +63,7 @@ const isTopPage = url.pathname === '/';
         <main class={isTopPage ? 'main main--2col' : 'main main--1col'}>
             {
                 isTopPage ? (
-                    <div class="l-row">
+                    <div class="l-row sm:flex-col">
                         <div class="l-column l-column--8">
                             <slot name="main" />
                         </div>

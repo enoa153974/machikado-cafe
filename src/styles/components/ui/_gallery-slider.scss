@@ -1,126 +1,121 @@
+@use '../../foundation/import.scss' as *;
 
+/* スライダーcssの読み込み */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 80%;
+    padding: 0;
+    margin: 0 auto;
 
-    /* スライダーcssの読み込み */
-    .slider {
-        position: relative;
+    @include media-query(md) {
         width: 100%;
-        max-width:80%;
-        padding: 0;
+        max-width: none;
         margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+.slider__wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    @include media-query(md) {
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+        margin-top: 25px;
+        overflow: visible;
     }
 
     .slick-slide {
         padding: 0;
         box-sizing: border-box;
+
+        @include media-query(md) {
+            width: auto;
+            padding: 0 0;
+            margin-right: 0.4688rem;
+            margin-left: 7.5008px;
+            border-radius: 30px;
+        }
     }
 
-    .slider__wrapper {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
 
     .slider__track .card {
         flex-shrink: 0;
         width: 100%;
         height: auto;
-        border:none;
-    }
-
-    .card__inner {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 4 / 3;
-        position: relative;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            border-radius: var(--radius-lg);
-        }
-    }
-
-    /* ドットコンテナ */
-    .slick-dots {
-        position: absolute;
-        bottom: -5%;
-        gap: 16px;
-        width: 100%;
-    }
-
-    .slick-dots li {
-        width: auto;
-        height: auto;
-        padding: 0;
-    }
-
-    /* 各ドットボタン */
-    .slick-dots li button {
-        position: static;
-        width: 16px;
-        height: 16px;
-        padding: 0;
-        margin: 0;
-        font-size: 0;
-        line-height: 0;
-        appearance: none;
-        cursor: pointer;
-        background-color: #eee;
         border: none;
-        border-radius: 50%;
-        transition: background-color 0.3s ease;
-    }
 
-    .slick-dots li.slick-active button {
-        background-color: var(--accent-color);
-    }
 
-    /* Slickのデフォルトの黒丸を消す */
-    .slick-dots li button::before {
-        display: none;
-        content: none;
-    }
-
-    /* gifエラー回避用 */
-    .slick-loading .slick-list {
-        background: none !important;
-    }
-
-    /* レスポンシブ対応（1枚表示） */
-    @media (width <=767px) {
-        /* ブレイクポイント767px */
-
-        .slider {
+        .card__inner {
             width: 100%;
-            max-width: none;
-            margin: 0 auto;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .slider__wrapper .slick-slide {
-            width: auto;
-            padding: 0 0;
-            margin-right: 0.4688rem;
-            margin-left: 7.5008px;
-        }
-
-        .slider__wrapper {
-            max-width: 100%;
             height: auto;
-            max-height: none;
-            margin-top: 25px;
-            overflow: visible;
-        }
+            aspect-ratio: 4 / 3;
+            position: relative;
 
-        .slick-slide {
-            border-radius: 30px;
-        }
-
-        .slick-dots {
-            gap: 10px;
-            margin-top: 9px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: var(--radius-lg);
+            }
         }
     }
+
+}
+
+/* ドットコンテナ */
+.slick-dots {
+    position: absolute;
+    bottom: -5%;
+    gap: 16px;
+    width: 100%;
+
+    @include media-query(md) {
+        gap: 10px;
+        margin-top: 9px;
+    }
+}
+
+.slick-dots li {
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+/* 各ドットボタン */
+.slick-dots li button {
+    position: static;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    appearance: none;
+    cursor: pointer;
+    background-color: #eee;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+    background-color: var(--accent-color);
+}
+
+/* Slickのデフォルトの黒丸を消す */
+.slick-dots li button::before {
+    display: none;
+    content: none;
+}
+
+/* gifエラー回避用 */
+.slick-loading .slick-list {
+    background: none !important;
+}

@@ -1,10 +1,32 @@
-.info__map {
-    margin: 0;
+@use '../../foundation/import.scss' as *;
 
-    iframe {
-        width: 100%;
-        aspect-ratio: 1/ 1;
+.info {
+
+    .l-column--8 {
+        @include media-query(md) {
+            width: 100%;
+        }
     }
+
+    .l-column--4 {
+        @include media-query(md) {
+            width: 100%;
+        }
+    }
+
+    .info__map {
+        margin: 0;
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 1/ 1;
+
+            @include media-query(md) {
+                aspect-ratio: 16/ 9;
+            }
+        }
+    }
+
 }
 
 .info__block {
@@ -14,6 +36,10 @@
         p {
             font-size: 1.25rem;
             font-weight: var(--font-weight-bold);
+
+            @include media-query(md) {
+                font-size: 0.75rem;
+            }
 
             a {
                 display: inline-block;
@@ -43,12 +69,19 @@
                 height: 120px;
                 color: #fff;
                 border-radius: 50%;
-                white-space: nowrap;
                 font-size: 12px;
                 opacity: 0;
                 visibility: hidden;
                 transition: opacity 0.6s ease;
                 z-index: 5;
+
+                @include media-query(md) {
+                    left: 40%;
+                    transform: translateY(-100%);
+                    font-size: 0.75rem;
+                    width: 120px;
+                    height: 120px;
+                }
 
                 &::after {
                     content: "\f0e0";
@@ -56,18 +89,35 @@
                     font-size: 1.5rem;
                     font-weight: 900;
                     margin-left: 0.1em;
+
+                    @include media-query(md) {
+                        font-size: 1rem;
+                    }
                 }
             }
 
             .tooltip:hover .tooltip-text {
                 opacity: 1;
                 visibility: visible;
+
             }
 
         }
 
         .cash-hint {
             font-size: 1rem;
+
+            @include media-query(md) {
+                font-size: 0.75rem;
+            }
         }
+
+        .l-column--6 {
+            @include media-query(md) {
+                width: 100%;
+            }
+        }
+
+
     }
 }

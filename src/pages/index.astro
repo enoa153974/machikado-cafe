@@ -41,7 +41,7 @@ const currentPath = '/';
             title="街角カフェのおすすめメニュー"
             gallerys={[
                 {
-                    image: '/assets/images/tentou_01.JPG',
+                    image: '/assets/images/tentou_01.jpg',
                     alt: ''
                 },
                 {
@@ -57,7 +57,7 @@ const currentPath = '/';
 
         <Cardbox />
 
-        <div class="map l-container px-8">
+        <div class="map l-container px-8 sm:px-4">
             <h2 class="font-bold u-heading-line mb-6">お店の場所</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.905040877367!2d135.62094841520982!3d34.783165780413405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60011ddc93c8c745%3A0xf55bd0aebda46ecc!2z44Ki44Or44O744OX44Op44K26aaZ6YeM5ZyS!5e0!3m2!1sja!2sjp!4v1670760042840!5m2!1sja!2sjp"
@@ -72,6 +72,9 @@ const currentPath = '/';
         <!-- サイドコンテンツ -->
         <NewsPage wrapperClass="news-page--top" />
         <ShopIntro />
-        <SNSCTA text="Instagram" buttonLabel="follow me!" buttonHref="移管先リンク" />
+        <SNSCTA 
+            text="Instagram" 
+            buttonLabel="follow me!" 
+            buttonHref="移管先リンク" />
     </Fragment>
 </BaseLayout>

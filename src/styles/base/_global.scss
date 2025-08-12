@@ -1,4 +1,5 @@
-/* === デバッグ用各要素アウトライン
+@use '../foundation/import.scss' as *;
+/* === デバッグ用各要素アウトライン}
 * {
     outline: 1px solid red;
 } === */
@@ -64,4 +65,18 @@ p+p{
 /* 共通のセクションに対して余白を調整 */
 section[id] {
     scroll-margin-top: 250px; // ← ヘッダーの高さに合わせて調整してね！
+}
+
+.main.main--2col{
+    .l-column--8{
+        @include media-query(md){
+            width: 100%;
+        }
+    }
+
+        .l-column--4{
+        @include media-query(md){
+            width: 100%;
+        }
+    }
 }

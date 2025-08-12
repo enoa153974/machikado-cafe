@@ -6,10 +6,10 @@ interface Props {
     className?: string;
 }
 
-const { imgSrc, alt, text, price, className = '' } = Astro.props;
+const { imgSrc, alt, text, className = '' } = Astro.props;
 ---
 
-<div class={`card flex flex-col items-center ${className} sm:justify-between`}>
+<div class={`card flex flex-col items-center rounded ${className} sm:justify-between`}>
         <div class="img__wrapper img-wrapper">
             <img src={imgSrc} alt={alt} class="card__img" />
         </div>
