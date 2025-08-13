@@ -14,7 +14,7 @@
     "scripts": {
         "dev": "astro dev --port 2000",
         "start": "astro dev",
-        "build":  "npm run sass:build && astro check && astro build",
+        "build": "npm run sass:build && astro check && astro build",
         "preview": "astro preview --port 8000",
         "astro": "astro",
         "lint": "npm run lint:style && npm run lint:es && npm run lint:html",
@@ -66,5 +66,11 @@
     "browserslist": [
         "last 2 versions",
         "> 1%"
-    ]
+    ],
+    "optionalDependencies": {
+        "@rollup/rollup-linux-x64-gnu": "4.14.3"
+    },
+    "overrides": {
+        "rollup": "4.14.3"
+    }
 }
