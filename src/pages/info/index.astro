@@ -2,7 +2,6 @@
 import siteData from '../../../siteData.mjs';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Info  from '../../components/Info.astro';
-import Gallery from '../../components/Gallery.astro';
 
 const pageId = 'info',
     pageMeta = siteData[pageId],
@@ -17,7 +16,7 @@ const pageId = 'info',
         }
     ];
 
-const currentPath = '/info'; 
+const currentPath = pageMeta.path;
 
 
 ---

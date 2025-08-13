@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 /**
  * ニュース1件分の型定義
@@ -15,26 +15,27 @@ export type NewsItem = {
  * 日付を統一フォーマット(YYYY-MM-DD)に変換
  * Markdownのfrontmatterでstring/date混在しても対応可能
  */
-function normalizeDate(d: string | Date): string {
-    if (typeof d === 'string') return d;
-    return d.toISOString().slice(0, 10);
+function normalizeDate(d: string | Date | undefined | null): string {
+    if (!d) return '';
+    return typeof d === 'string' ? d : d.toISOString().slice(0, 10);
 }
 
 /**
  * newsコレクションから全件取得し、
  * データ構造を整えて日付の新しい順に並び替えて返す
  */
+
 export async function getNewsItems(): Promise<NewsItem[]> {
-    const raw = await getCollection('news'); // Markdownファイル全件取得
+    const raw = await getCollection('news');  // Markdownファイル全件取得
     return raw
-        .map(({ data, slug }) => ({
-            title: data.title,
-            date: normalizeDate(data.date as any),
-            category: data.category,
-            image: data.image ?? '',
-            slug,
+        .map((entry: CollectionEntry<'news'>) => ({
+            title: entry.data.title,
+            date: normalizeDate(entry.data.date),
+            category: entry.data.category ?? '',
+            image: entry.data.image ?? '',
+            slug: entry.slug,
         }))
-        .sort((a, b) => +new Date(b.date) - +new Date(a.date)); // 新しい順に並べ替え
+        .sort((a: NewsItem, b: NewsItem) => +new Date(b.date) - +new Date(a.date)); // 新しい順に並べ替え
 }
 
 /**
@@ -44,6 +45,6 @@ export async function getNewsItems(): Promise<NewsItem[]> {
  */
 export async function getLatestNews(limit = 5, category?: string): Promise<NewsItem[]> {
     const all = await getNewsItems();
-    const filtered = category ? all.filter(i => i.category === category) : all;
+    const filtered = category ? all.filter((i) => i.category === category) : all;
     return filtered.slice(0, limit);
 }

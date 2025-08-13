@@ -22,7 +22,9 @@
         "lint:es": "eslint 'src/**/*.{astro,tsx,ts}'",
         "lint:html": "markuplint 'src/**/*.{html,astro,tsx}'",
         "format": "prettier --ignore-path .prettierignore --write .",
-        "path": "node relativePath.mjs"
+        "path": "node relativePath.mjs",
+        "sass:build": "sass src/styles/style.scss public/assets/styles/style.css --no-source-map --style=compressed",
+        "sass:watch": "sass --watch src/styles/style.scss:public/assets/styles/style.css"
     },
     "devDependencies": {
         "@markuplint/astro-parser": "^4.6.2",
@@ -62,6 +64,7 @@
         "typescript": "^5.4.5"
     },
     "browserslist": [
-        "last 2 versions, > 1%"
+        "last 2 versions",
+        "> 1%"
     ]
 }

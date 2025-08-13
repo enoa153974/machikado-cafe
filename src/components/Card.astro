@@ -4,11 +4,11 @@ interface Props {
     alt: string;
     text: string;
     className?: string;
-    aos:string;
-    delay:string;
+    aos?:string;
+    delay?:string;
 }
 
-const { imgSrc, alt, text, className = '',aos ,delay } = Astro.props;
+const { imgSrc, alt, text, className = '',aos ='fade' ,delay ='0' } = Astro.props;
 ---
 
 <div class={`card flex flex-col items-center rounded ${className} sm:justify-between`} data-aos={aos} data-aos-delay={delay}>

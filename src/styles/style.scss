@@ -29,16 +29,8 @@
  * ---------------------------- */
 /* ハンバーガーメニューcss */
 @use 'components/ui/hamburger';
-/* アコーディオンメニューcss/デザイン-base */
-@use 'components/ui/accordion';
-/* アコーディオンメニューcss/デザイン-caregory */
-@use 'components/ui/accordion-category';
-/* スライダー（カルーセル）css */
-/* @use 'components/ui/slider-arrow'; */
 /* スライダー（カルーセル）css */
 @use 'components/ui/gallery-slider';
-/* タブメニューcss */
-@use 'components/ui/tab-menu';
 /* パンくずリストのcss */
 @use 'components/ui/breadcrumb';
 /* カードのcss */
@@ -52,8 +44,6 @@
 @use 'components/sections/card-box';
 @use 'components/sections/hero';
 @use 'components/sections/features';
-@use 'components/sections/voices';
-@use 'components/sections/hero-sample';
 @use 'components/sections/sns-cta';
 @use 'components/sections/info';
 @use 'components/sections/intro';
