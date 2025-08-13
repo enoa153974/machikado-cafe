@@ -1,23 +1,41 @@
 @use '../../foundation/import.scss' as *;
+
 .hero__text {
-    top:10%;
+    top: 6%;
     left: 0;
 
-    h1 {
-        font-size: 4rem;
+    h2 {
+        font-size: var(--font-size-4xl);
+        text-shadow:
+            -1px -1px 0 rgba(255, 255, 255, .6),
+            1px 1px 0 rgba(0, 0, 0, .25);
     }
 
     p {
-        font-size: 2rem;
+        font-size: var(--font-size-3xl);
+        text-shadow:
+            -1px -1px 0 rgba(255, 255, 255, .6),
+            1px 1px 0 rgba(0, 0, 0, .25);
     }
 
-    @include  media-query(md) {
-        h1 {
-            font-size: 2.5rem;
+    @include media-query(md) {
+        h2 {
+            font-size: var(--font-size-3xl);
         }
 
         p {
-            font-size: 1.25rem;
+            font-size: var(--font-size-xl);
+        }
+    }
+
+    
+    @include media-query(xs) {
+        h2 {
+            font-size: var(--font-size-base);
+        }
+
+        p {
+            font-size: var(--font-size-xs);
         }
     }
 }

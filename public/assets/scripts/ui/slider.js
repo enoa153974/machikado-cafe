@@ -6,7 +6,10 @@ export function initSlider() {
             slidesToShow: 1,
             slidesToScroll: 1,
             variableWidth: false,
-            autoplay: false,
+            autoplay:true,
+            autoplaySpeed: 3000, 
+            speed:1300,
+            pauseOnDotsHover: true,
             dots: true,
             arrows: false,
             responsive: [

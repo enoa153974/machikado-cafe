@@ -1,16 +1,23 @@
 @use '../../foundation/import.scss' as *;
-    .intro__container{
-        h3.u-heading-line{
-            padding-bottom: 1rem;
-        }
-        .img-wrapper{
-            max-width: 50%;
-            @include media-query(md){
-                max-width: 100%;
-            }
-        }
-        p{
-            font-size: 1.25rem;
-        }
 
+.intro__container {
+    h3.u-heading-line {
+        padding-bottom: 1rem;
     }
+
+    .img-wrapper {
+        max-width: 70%;
+        @include media-query(md) {
+            max-width: 100%;
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+
+        @include media-query(md) {
+            font-size: 1rem;
+        }
+    }
+
+}

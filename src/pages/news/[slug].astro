@@ -27,7 +27,7 @@ const dateText = typeof data.date === 'string' ? data.date : data.date.toISOStri
 ---
 
 <BaseLayout title={data.title}>
-    <article class="news-article l-wrapper py-10">
+    <article class="news-article l-wrapper py-10 sm:pt-4" data-aos="fade-left" data-aos-delay="200">
         <div class="l-container">
             <div class="l-inner">
                 <nav class="breadcrumb flex justify-end mt-3 sm:mt-6" aria-label="パンくずリスト">
@@ -42,7 +42,7 @@ const dateText = typeof data.date === 'string' ? data.date : data.date.toISOStri
 
                 {
                     data.image && (
-                        <figure class="mb-6 img-wrapper w-harf rounded-lg">
+                        <figure class="mb-6 img-wrapper w-harf rounded-lg sm:w-full">
                             <img src={data.image} alt={data.title} loading="lazy" />
                         </figure>
                     )

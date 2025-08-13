@@ -28,10 +28,22 @@ h1 {
 
 h2 {
     font-size: var(--font-size-lg2);
+
+    @include media-query(md) {
+        font-size: var(--font-size-xl);
+    }
 }
 
 h3 {
     font-size: var(--font-size-xl);
+
+    @include media-query(md) {
+        font-size: var(--font-size-lg);
+    }
+}
+
+p {
+    font-size: 1rem;
 }
 
 img {
@@ -45,7 +57,7 @@ a {
 }
 
 /* 段落間の行間 */
-p+p{
+p+p {
     margin-top: 1em;
 }
 
@@ -67,15 +79,15 @@ section[id] {
     scroll-margin-top: 250px; // ← ヘッダーの高さに合わせて調整してね！
 }
 
-.main.main--2col{
-    .l-column--8{
-        @include media-query(md){
+.main.main--2col {
+    .l-column--8 {
+        @include media-query(md) {
             width: 100%;
         }
     }
 
-        .l-column--4{
-        @include media-query(md){
+    .l-column--4 {
+        @include media-query(md) {
             width: 100%;
         }
     }

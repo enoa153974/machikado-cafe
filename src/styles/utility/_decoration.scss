@@ -87,3 +87,12 @@
 .hover-opacity:hover {
     opacity: 0.6;
 }
+
+/* 最小版：ホバー/キーボードフォーカスで字間が開く */
+.hover-letter-spacing {
+  letter-spacing: 0;                      /* 初期の字間 */
+  transition: letter-spacing .3s ease;   /* アニメ時間は好みで */
+}
+.hover-letter-spacing:hover{
+  letter-spacing: .08em;                  /* 開く量（例：0.08em） */
+}

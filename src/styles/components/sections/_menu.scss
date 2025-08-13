@@ -1,26 +1,40 @@
 @use '../../foundation/import.scss' as *;
+
 .grid__box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
+
+    @include media-query(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-.menu p+p{
+.menu p+p {
     margin: 0;
 }
 
-.menu.card-box__card-item{
-    p:nth-child(2){
+.menu.card-box__card-item {
+    p:nth-child(2) {
         font-size: 1.25rem;
         font-weight: var(--font-weight-bold);
         padding: 0;
+
+        @include media-query(md) {
+            font-size: var(--font-size-xs);
+        }
     }
-        p:nth-child(3){
+
+    p:nth-child(3) {
         font-size: 1.25rem;
         padding: 0;
         color: red;
+        @include media-query(md) {
+            font-size: var(--font-size-xs);
+        }
     }
-    .menu__price::after{
+
+    .menu__price::after {
         content: "(税込)";
         font-size: 0.8em;
     }
