@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import type { siteDataType } from '../types/siteData';
 import AOSInit from '../components/AOSInit.jsx';
-import '../styles/style.scss';
+//import '../styles/style.scss';
 
 const siteData: siteDataType = {
     siteName: import.meta.env.PUBLIC_SITENAME,
@@ -22,7 +22,7 @@ const siteData: siteDataType = {
     }
 };
 
-const { currentPath, ...otherProps } = Astro.props;
+const { currentPath } = Astro.props;
 const url = new URL(Astro.request.url);
 const isTopPage = url.pathname === '/';
 ---
