@@ -5,7 +5,9 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-    site: import.meta.env.MODE === 'production' ? 'https://example.com' : 'http://localhost:2000',
+    site: import.meta.env.MODE === 'production'
+        ? 'https://example.com'
+        : 'http://localhost:2000',
     base: '/',
     trailingSlash: 'ignore',
     output: 'static',
@@ -27,14 +29,13 @@ export default defineConfig({
             rollupOptions: {
                 output: {
                     entryFileNames: 'assets/scripts/main.min.js',
-                    // chunkFileNames: 'assets/scripts/main.min.js',
                     assetFileNames: (assetFile) => {
-                        if (assetFile.name !== undefined) {
+                        if (assetFile.name) {
                             if (/\.css$/.test(assetFile.name)) {
                                 return 'assets/styles/style.min.[ext]';
-                            } else if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetFile.name)) {
+                            } else if (/\.(gif|jpe?g|png|svg|webp)$/.test(assetFile.name)) {
                                 return 'assets/images/[name].min.[ext]';
-                            } else if (/\.( ttf|otf|eot|woff|woff2| )$/.test(assetFile.name)) {
+                            } else if (/\.(ttf|otf|eot|woff2?)$/.test(assetFile.name)) {
                                 return 'assets/fonts/[name].[ext]';
                             } else {
                                 return 'assets/[name].[ext]';
@@ -50,7 +51,7 @@ export default defineConfig({
             experimentalReactChildren: true,
             include: ['**/react/*']
         }),
-        vue({}),
+        vue(),
         sitemap()
     ],
     markdown: {
