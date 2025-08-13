@@ -214,6 +214,10 @@ $base-gap-size: var(--space-R) !default;
         aspect-ratio: 16 / 9;
     }
 
+    &--aspect-4-3 {
+        aspect-ratio: 4 / 3;
+    }
+
     &--aspect-1-1 {
         aspect-ratio: 1 / 1;
     }
