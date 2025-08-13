@@ -1,7 +1,6 @@
 ---
 import siteData from '../../../siteData.mjs';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Info  from '../../components/Info.astro';
 
 const pageId = 'contact',
     pageMeta = siteData[pageId],
@@ -16,9 +15,7 @@ const pageId = 'contact',
         }
     ];
 
-const currentPath = pageMeta.path;; 
-
-
+const currentPath = pageMeta.path;
 ---
 
 <!--BaseLayout.hemlの<slot />内に代入される -->
@@ -32,6 +29,12 @@ const currentPath = pageMeta.path;;
     ldJSON={ldJSON}
     currentPath={currentPath}
 >
-        <Info />
+    <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfYJemx3Btw7eWGMg8KmlHLaMnBwkr5vn-Ve38I5IVu1QVmbw/viewform?embedded=true"
+        width="100%"
+        height="1000"
+        style="border:0; margin:0; padding:0;"
+        loading="lazy"
+        allowfullscreen>読み込んでいます…</iframe
+    >
 </BaseLayout>
-

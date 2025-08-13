@@ -1,4 +1,5 @@
 ---
+import siteData from '../../siteData.mjs';
 import Button from '../components/Button';
 ---
 
@@ -70,7 +71,7 @@ import Button from '../components/Button';
                     <!-- レイアウト用空box -->
                 </div>
                 <div class="l-column l-column--6 flex justify-end">
-                    <Button href="リンク" className="info__btn" variant="secondary">
+                    <Button href={siteData.contact.path} className="info__btn" variant="secondary">
                         <span>お問い合わせフォーム</span>
                     </Button>
                 </div>
