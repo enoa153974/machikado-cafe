@@ -1,0 +1,10 @@
+.news-body p {
+    margin: 0 0 1em;
+    /* 下にだけ余白 */
+    line-height: 1.5;
+    /* 読みやすいように行間も調整 */
+}
+
+.news-body p:not(:last-child) {
+    margin-bottom: 1rem;
+}

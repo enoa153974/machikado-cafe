@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import siteData from '../../../siteData.mjs';
 import { getCollection, getEntryBySlug } from 'astro:content';
+import { Image } from 'astro:assets';
 
 // 全 slug を静的生成
 export async function getStaticPaths() {
@@ -9,7 +10,6 @@ export async function getStaticPaths() {
     return allNews.map((entry) => ({ params: { slug: entry.slug } }));
 }
 
-// slug から記事取得
 const { slug } = Astro.params;
 const entry = await getEntryBySlug('news', slug);
 
@@ -17,12 +17,9 @@ if (!entry) {
     throw new Error(`記事が見つかりませんでした: ${slug}`);
 }
 
-// ★ ここがポイント：render() して Content を取り出す
-const { Content, headings } = await entry.render();
-// data は entry.data から取る
+const { Content } = await entry.render();
 const { data } = entry;
 
-// 日付を文字列に統一
 const dateText = typeof data.date === 'string' ? data.date : data.date.toISOString().slice(0, 10);
 ---
 
@@ -38,17 +35,19 @@ const dateText = typeof data.date === 'string' ? data.date : data.date.toISOStri
                 </nav>
 
                 <h2 class="font-bold mb-2 u-heading-line">{data.title}</h2>
-                <p class="font-bold mb-6">{dateText} ／ {data.category}</p>
+                <p class="font-bold mb-6">
+                    {dateText} ／ {data.category}
+                </p>
 
                 {
                     data.image && (
                         <figure class="mb-6 img-wrapper w-harf rounded-lg sm:w-full">
-                            <img src={data.image} alt={data.title} loading="lazy" />
+                            <Image src={data.image} alt={data.title} loading="lazy" />
                         </figure>
                     )
                 }
 
-                <div>
+                <div class="news-body">
                     <Content />
                 </div>
             </div>
